@@ -27,18 +27,22 @@ const getById = (id: number): Response<Player[]> => {
 }
 
 const getByNamePrefix = (namePrefix: string): Response<Player[]> => {
-    const players = getPlayersByNamePrefix(namePrefix);
-
-    if (players.length === 0) {
-        return buildResponse([], "No players starting with " + namePrefix);
+    if (namePrefix.length === 0) {
+        return buildResponse([], "You got to give me a start!");
     }
 
-    return buildResponse(players, "");
+    const players = getPlayersByNamePrefix(namePrefix);
+
+    return buildResponse(players, "No players starting with " + namePrefix);
 }
 
-const buildResponse = (players: Player[], errorMsg: string): Response<Player[]> => {
-    if (players === undefined || players === null || players.length === 0) {
-        return new Response(500, errorMsg, players);
+const buildResponse = (players: Player[], message: string): Response<Player[]> => {
+    if (players === undefined || players === null) {
+        return new Response(500, message, players);
+    }
+
+    if (players.length === 0) {
+        return new Response(200, message, players);
     }
 
     // To-do: change to log
