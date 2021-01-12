@@ -1,0 +1,34 @@
+{
+  "name": "cric-exchange-app-server",
+  "version": "0.0.1",
+  "description": "App server that handles request from cric exachange UI.",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "author": {
+    "name": "Nikhil Lakshman, Rohit Nair",
+    "email": "lakshman.nikhil23@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "@types/node": "^9.6.5",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.15.0",
+    "pg": "^8.5.1",
+    "reflect-metadata": "^0.1.12",
+    "typeorm": "^0.2.15"
+  },
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "typeorm": "./node_modules/.bin/typeorm "
+  }
+}
