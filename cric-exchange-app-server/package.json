@@ -1,7 +1,7 @@
 {
   "name": "cric-exchange-app-server",
   "version": "0.0.1",
-  "description": "App server that handles request from cric exachange UI.",
+  "description": "App server that handles request from CricExachange UI.",
   "license": "MIT",
   "readmeFilename": "README.md",
   "author": {
