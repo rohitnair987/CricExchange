@@ -18,7 +18,7 @@ const INVALID_PLAYER_BY_NAME_PREFIX = {
     NAME_PREFIX: "xyz"
 }
 
-test('getById with null id', () => {
+test('getPlayers with no input', () => {
     // given
     const playerSearchParams = new PlayerSearchParams();
     // playerSearchParams.id = ;
